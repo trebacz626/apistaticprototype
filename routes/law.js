@@ -17,7 +17,7 @@ var laws =[
 module.exports=function(router){
     router.get("/laws/:id",function(req,res,next){
         if(req.params.id<laws.length)
-            res.send(laws[req.params.id])
+            res.send(laws[req.params.id-1])
         else
             res.send("This user doesn't exist")
     })
