@@ -14,7 +14,7 @@ module.exports=function(router){
     router.get("/users/:id",function(req,res,next){
         console.log("getting user")
         if(req.params.id<users.length)
-            res.send(user[req.params.id])
+            res.send(users[req.params.id])
         else
             res.send("This user doesn't exist")
     })
